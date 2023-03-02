@@ -21,7 +21,11 @@
           <td>{{ item.lastname }}</td>
           <td>{{ item.phonenumber}}</td>
           <td>{{ item.email}}</td>
+          <td>
+            <a class="btn btn-primary" [routerLink]="['/edit', item.id]">Edit</a>
+          </td>
         </tr>
+        
       </tbody>
     </table>
   </div>

@@ -1,1 +1,23 @@
-<p>edit works!</p>
+<div class="container">
+    <legend>Edit Contact</legend>
+    <form>
+        <div class="mb-3">
+          <label for="firstname" class="form-label">First Name</label>
+          <input type="text" name="firstname" [(ngModel)] = "contactForm.firstname" class="form-control" id="txtfirstname" />
+        </div>
+        <div class="mb-3">
+          <label for="lastname" class="form-label">Last Name</label>
+          <input type="text" name="lastname" [(ngModel)] = "contactForm.lastname" class="form-control" id="lastname" />
+        </div>
+       
+        <div class="mb-3">
+          <label for="txtphonenumber" class="form-label">Phone Number</label>
+          <input type="number" name="phonenumber" [(ngModel)] = contactForm.phonenumber class="form-control" id="txtphonenumber" />
+        </div>
+        <div class="mb-3">
+          <label for="txtemail" class="form-label">Email</label>
+          <input type="text" name="email" [(ngModel)] = "contactForm.email" class="form-control" id="email" />
+        </div>
+        <button type="button" (click)="edit()" class="btn btn-primary">Edit</button>
+      </form>
+</div>
