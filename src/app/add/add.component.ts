@@ -25,7 +25,7 @@ export class AddComponent implements OnInit {
     this.ContactService.add(this.contactForm)
     .subscribe({
       next:(data) => {
-        this.router.navigate(["/user/home"])
+        this.router.navigate(["/home"])
       },
       error:(err) => {
         console.log(err);
