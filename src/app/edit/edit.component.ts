@@ -18,6 +18,7 @@ export class EditComponent implements OnInit {
   constructor(private ContactService:ContactService,private route: ActivatedRoute, private router:Router) { }
 
   ngOnInit(): void {
+    
     this.route.paramMap.subscribe((param) => {
       var id = Number(param.get('id'));
       this.getById(id);

@@ -24,5 +24,8 @@ export class ContactService {
    getById(id: number) {
     return this.http.get<Contact>(`http://localhost:3000/user/${id}`);
    }
+   delete(id:number){
+    return this.http.delete<Contact>(`http://localhost:3000/user/${id}`);
+ }
 }
 

@@ -22,10 +22,29 @@
           <td>{{ item.phonenumber}}</td>
           <td>{{ item.email}}</td>
           <td>
-            <a class="btn btn-primary" [routerLink]="['/edit', item.id]">Edit</a>
-          </td>
+            <a class="btn btn-warning" [routerLink]="['/edit', item.id]">Edit</a> |
+            <button type="button" (click)="openDeleteModal(item.id)" class="btn btn-secondary">Delete</button>
+            </td>
         </tr>
         
       </tbody>
     </table>
+    <!-- Modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Warning!</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Are you sure to delete the item?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-danger" (click)="delete()">Confirm Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
   </div>

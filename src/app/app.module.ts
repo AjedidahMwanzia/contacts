@@ -8,12 +8,14 @@ import { HomeComponent } from './home/home.component';
 import { AddComponent } from './add/add.component';
 import { EditComponent } from './edit/edit.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     AddComponent,
-    EditComponent
+    EditComponent,
+  
   ],
   imports: [
     BrowserModule,
