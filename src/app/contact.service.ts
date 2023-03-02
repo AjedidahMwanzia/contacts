@@ -7,13 +7,22 @@ import { Contact } from './contact';
 })
 export class ContactService {
  
-  constructor(private http: HttpClient) { 
-    
-  }
+  constructor(private http: HttpClient) { }
+
   get() {
     return this.http.get<Contact[]>('http://localhost:3000/user');
   }
+
   add(payload: Contact) {
     return this.http.post<Contact>('http://localhost:3000/user', payload);
   }
+
+  edit(payload:Contact){
+    return this.http.put(`http://localhost:3000/user/${payload.id}`,payload);
+   }
+
+   getById(id: number) {
+    return this.http.get<Contact>(`http://localhost:3000/user/${id}`);
+   }
 }
+
