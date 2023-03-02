@@ -13,4 +13,7 @@ export class ContactService {
   get() {
     return this.http.get<Contact[]>('http://localhost:3000/user');
   }
+  add(payload: Contact) {
+    return this.http.post<Contact>('http://localhost:3000/user', payload);
+  }
 }
