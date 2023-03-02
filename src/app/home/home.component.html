@@ -1,1 +1,22 @@
-<p>home works!</p>
+<p><div class="container">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">firstname</th>
+          <th scope="col">lastname</th>
+          <th scope="col">phonenumber</th>
+          <th scope="col">email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of allContacts">
+          <th scope="row">{{ item.id }}</th>
+          <td>{{ item.firstname }}</td>
+          <td>{{ item.lastname }}</td>
+          <td>{{ item.phonenumber}}</td>
+          <td>{{ item.email}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
